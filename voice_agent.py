@@ -9,7 +9,7 @@ from TTS.api import TTS
 
 
 # Configuration
-ASSEMBLYAI_API_KEY = "66bf7dfc4a264729a63571ec5376ecf5"  # Replace with your AssemblyAI API key
+ASSEMBLYAI_API_KEY = "66bf7dfc4a264729a63571ec5376ecf5"  
 MCP_SERVER_PORT = 8000
 TTS_MODEL = "tts_models/en/ljspeech/tacotron2-DDC"
 
@@ -68,7 +68,7 @@ def speak_text(text):
     output_path = "output.wav"
     tts.tts_to_file(text=text, file_path=output_path)
     print("Playing audio response...")
-    os.system(f"afplay {output_path}")  # Use 'aplay' on Linux or adjust for your OS
+    os.system(f"afplay {output_path}")  
     return "Spoken."
 
 # Main workflow
